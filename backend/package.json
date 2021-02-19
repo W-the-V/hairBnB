@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
     "start": "per-env",
@@ -36,5 +35,4 @@
     "dotenv-cli": "^4.0.0",
     "nodemon": "^2.0.7"
   }
-
 }

@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const apiRouter = require("./api");
+
+router.use("/api", apiRouter);
+
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   router.get("/", (req, res) => {
@@ -23,6 +26,5 @@ if (process.env.NODE_ENV !== "production") {
     return res.json({});
   });
 }
-router.use("/api", apiRouter);
 
 module.exports = router;
