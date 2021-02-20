@@ -14,11 +14,6 @@ function ProfileButton({ user }) {
   const signUpState = useSelector((state) => state.signup);
   const menuState = useSelector((state) => state.menu);
 
-  const openMenu = () => {
-    if (menuState) return;
-    dispatch(changeMenu());
-  };
-
   useEffect(() => {
     if (!menuState) return;
 
@@ -43,10 +38,6 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button className="navButton" onClick={() => openMenu()}>
-        <i className="fas fa-bars"></i>
-        <i className="fas fa-user-circle" />
-      </button>
       {menuState && user && (
         <div className="menuBox">
           <nav className="menuSection">
