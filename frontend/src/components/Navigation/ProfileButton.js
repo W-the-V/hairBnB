@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import { activateLogin } from "../../store/loginModal";
 import { activateSignUp } from "../../store/signUpModal";
-import LoginModal from "./LoginModal";
-import SignUpModal from "./SignUpModal";
+import LoginModal from "../LoginModal";
+import SignUpModal from "../SignUpModal";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
