@@ -10,6 +10,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: -1;
 }
 .localBox {
   display: flex;
@@ -21,4 +22,24 @@
 }
 .largeText {
   margin: 0;
+  background-color: Black;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.largeButton {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: currentcolor none medium;
+  padding: 7px 15px;
+  line-height: 18px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border: 1px solid rgb(221, 221, 221);
+}
+.largeButton:hover {
+  background-color: #ddddddcc;
 }

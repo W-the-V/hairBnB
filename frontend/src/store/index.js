@@ -4,11 +4,13 @@ import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import loginModalReducer from "./loginModal";
 import signUpModalReducer from "./signUpModal";
+import menuReducer from "./showMenu";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   login: loginModalReducer,
   signup: signUpModalReducer,
+  menu: menuReducer,
 });
 
 let enhancer;

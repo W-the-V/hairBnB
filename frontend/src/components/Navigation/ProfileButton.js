@@ -6,29 +6,31 @@ import { activateLogin } from "../../store/loginModal";
 import { activateSignUp } from "../../store/signUpModal";
 import LoginModal from "../LoginModal";
 import SignUpModal from "../SignUpModal";
+import { changeMenu } from "../../store/showMenu";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const loginState = useSelector((state) => state.login);
   const signUpState = useSelector((state) => state.signup);
-  const [showMenu, setShowMenu] = useState(false);
+  const menuState = useSelector((state) => state.menu);
 
   const openMenu = () => {
-    if (showMenu) return;
-    setShowMenu(true);
+    if (menuState) return;
+    dispatch(changeMenu());
   };
 
   useEffect(() => {
-    if (!showMenu) return;
+    if (!menuState) return;
 
     const closeMenu = () => {
-      setShowMenu(false);
+      dispatch(changeMenu());
     };
 
-    document.addEventListener("click", closeMenu);
+    document.querySelector("#root").addEventListener("click", closeMenu);
 
-    return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
+    return () =>
+      document.querySelector("#root").removeEventListener("click", closeMenu);
+  }, [menuState]);
 
   const logout = (e) => {
     e.preventDefault();
@@ -41,10 +43,11 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button className="navButton" onClick={openMenu}>
+      <button className="navButton" onClick={() => openMenu()}>
+        <i className="fas fa-bars"></i>
         <i className="fas fa-user-circle" />
       </button>
-      {showMenu && user && (
+      {menuState && user && (
         <div className="menuBox">
           <nav className="menuSection">
             <NavLink to="/signup">
@@ -78,16 +81,18 @@ function ProfileButton({ user }) {
             <NavLink to="/signup">
               <button className="menuButton">Help</button>
             </NavLink>
-            <button className="menuButton" onClick={logout}>
-              Log Out
-            </button>
+            <NavLink to="/signup">
+              <button className="menuButton" onClick={logout}>
+                Log Out
+              </button>
+            </NavLink>
           </nav>
         </div>
       )}
       {loginState && !user && <LoginModal />}
       {signUpState && !user && <SignUpModal />}
-      {showMenu && !user && (
-        <>
+      {menuState && !user && (
+        <div className="menuBox">
           <div className="menuSection">
             <button
               className="menuButton"
@@ -105,7 +110,7 @@ function ProfileButton({ user }) {
               Demo
             </button>
           </div>
-        </>
+        </div>
       )}
     </>
   );

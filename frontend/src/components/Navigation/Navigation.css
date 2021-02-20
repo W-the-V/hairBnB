@@ -4,26 +4,80 @@
   width: 100%;
   justify-content: space-between;
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  height: 40px;
 }
-.userMenuShell,
-.menuSection {
+.userMenuShell {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .userMenuShell {
-  align-self: flex-start;
-  width: 140px;
-  height: 90px;
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .menuBox {
-  display: inline;
-  position: relative;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  border-radius: 12px;
+  color: rgb(34, 34, 34);
+  margin-top: 10px;
+  margin-right: 60px;
+  padding: 8px 0px;
 }
-body {
-  height: 100%;
+
+.navButton,
+.homeButton {
+  height: 35px;
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 221, 221);
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  border-radius: 21px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.menuSection {
+  padding: 5px;
+}
+
+.fa-user-circle {
+  font-size: 22px;
+}
+.fa-bars {
+  font-size: 14px;
+  margin-left: 6px;
+}
+.menuButton {
+  align-self: center;
+  text-decoration: none;
+  background: transparent none repeat scroll 0% 0%;
+  border: 0px none;
+  color: rgb(34, 34, 34);
+  display: flex;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 5px;
+  outline: currentcolor none medium;
+  text-align: inherit;
+  white-space: nowrap;
   width: 100%;
+  left: 0;
+  cursor: pointer;
+}
+.menuButton:hover,
+.navButton:hover,
+.homeButton:hover {
+  background-color: #ddddddcc;
 }
