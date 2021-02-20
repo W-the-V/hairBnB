@@ -11,6 +11,7 @@
   left: 0;
   top: 0;
   z-index: -1;
+  min-width: 830px;
 }
 .localBox {
   display: flex;
