@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import LoginFormModal from "../LoginFormModal";
+import { deactivateLogin, activateLogin } from "../../store/loginModal";
+import LoginModal from "./LoginModal";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
+  const loginState = useSelector((state) => state.login);
   const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => {
@@ -75,11 +79,16 @@ function ProfileButton({ user }) {
           </nav>
         </div>
       )}
-
+      {loginState && <LoginModal />}
       {showMenu && !user && (
-       <>
+        <>
           <nav className="menuSection">
-            <LoginFormModal />
+            <button
+              className="menuButton"
+              onClick={() => dispatch(activateLogin())}
+            >
+              Login
+            </button>
             <NavLink to="/signup">
               <button className="menuButton">Sign Up</button>
             </NavLink>
