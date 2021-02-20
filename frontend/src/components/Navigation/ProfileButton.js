@@ -34,6 +34,10 @@ function ProfileButton({ user }) {
     e.preventDefault();
     dispatch(sessionActions.logout());
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.demo());
+  };
 
   return (
     <>
@@ -84,7 +88,7 @@ function ProfileButton({ user }) {
       {signUpState && !user && <SignUpModal />}
       {showMenu && !user && (
         <>
-          <nav className="menuSection">
+          <div className="menuSection">
             <button
               className="menuButton"
               onClick={() => dispatch(activateLogin())}
@@ -97,10 +101,10 @@ function ProfileButton({ user }) {
             >
               Sign Up
             </button>
-            <NavLink to="/signup">
-              <button className="menuButton">Demo</button>
-            </NavLink>
-          </nav>
+            <button className="menuButton" onClick={handleSubmit}>
+              Demo
+            </button>
+          </div>
         </>
       )}
     </>

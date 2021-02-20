@@ -27,6 +27,20 @@ router.post(
   })
 );
 
+router.post(
+  "/demo",
+  asyncHandler(async (req, res, next) => {
+    const user = await User.login({
+      credential: "demoUser",
+      password: "password",
+    });
+    await setTokenCookie(res, user);
+    return res.json({
+      user,
+    });
+  })
+);
+
 router.delete("/", (_req, res) => {
   res.clearCookie("token");
   return res.json({ message: "success" });
