@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import { activateLogin } from "../../store/loginModal";
-import { activateSignUp } from "../../store/signUpModal";
+import { activateLogin, deactivateLogin } from "../../store/loginModal";
+import { activateSignUp, deactivateSignUp } from "../../store/signUpModal";
 import LoginModal from "../LoginModal";
 import SignUpModal from "../SignUpModal";
 import { changeMenu } from "../../store/showMenu";
@@ -29,6 +29,8 @@ function ProfileButton({ user }) {
 
   const logout = (e) => {
     e.preventDefault();
+    dispatch(deactivateLogin());
+    dispatch(deactivateSignUp());
     dispatch(sessionActions.logout());
   };
   const handleSubmit = (e) => {

@@ -42,42 +42,49 @@ const LoginModal = () => {
 
   return (
     <>
-      <div className="LoginForm">
-        <Modal
-          isOpen={loginState}
-          onRequestClose={onclick}
-          contentLabel="Login"
-          style={customStyles}
-        >
-          {/* <button onClick={onclick}>close</button> */}
-          <form onSubmit={handleSubmit}>
+      <Modal
+        isOpen={loginState}
+        onRequestClose={onclick}
+        contentLabel="Login"
+        style={customStyles}
+      >
+        <div className="LoginShell">
+          <div className="formTitle">
+            <h1>Log In</h1>
+          </div>
+          <form className="LoginForm" onSubmit={handleSubmit}>
             <ul>
               {errors.map((error, idx) => (
                 <li key={idx}>{error}</li>
               ))}
             </ul>
-            <label>
-              Username or Email
+            <div className="inputBox">
+              <label>Username or Email</label>
               <input
                 type="text"
                 value={credential}
                 onChange={(e) => setCredential(e.target.value)}
                 required
+                className="formInput"
               />
-            </label>
-            <label>
-              Password
+            </div>
+            <div className="inputBox">
+              <label>Password</label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                placeholder="Password"
+                className="formInput"
               />
-            </label>
-            <button type="submit">Log In</button>
+            </div>
+            <button className="modalButton" type="submit">
+              Log In
+            </button>
           </form>
-        </Modal>
-      </div>
+        </div>
+      </Modal>
     </>
   );
 };
