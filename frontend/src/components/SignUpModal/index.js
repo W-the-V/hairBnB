@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
 
-import { deactivateSignUp } from "../../store/signUpModal";
+import { deactivateSignUp } from "../../store/Modals";
 import * as sessionActions from "../../store/session";
 
 Modal.setAppElement(document.getElementById("root"));
@@ -20,7 +20,7 @@ const customStyles = {
 
 function SignUpModal() {
   const dispatch = useDispatch();
-  const signUpState = useSelector((state) => state.signup);
+  const signUpState = useSelector((state) => state.modal.signup);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

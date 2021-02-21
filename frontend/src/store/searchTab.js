@@ -25,32 +25,38 @@ const searchTabReducer = (state = initialState, action) => {
   switch (action.type) {
     case BARBER:
       if (state.salon) {
-        newObj.salon = !state.salon;
+        newObj.salon = false;
       }
       if (state.donation) {
-        newObj.donation = !state.donation;
+        newObj.donation = false;
       }
-      newObj.barber = !state.barber;
+      if (state.barber) {
+        newObj.barber = false;
+      } else newObj.barber = true;
       newState = Object.assign({}, state, newObj);
       return newState;
     case SALON:
       if (state.barber) {
-        newObj.barber = !state.barber;
+        newObj.barber = false;
       }
       if (state.donation) {
-        newObj.donation = !state.donation;
+        newObj.donation = false;
       }
-      newObj.salon = !state.salon;
+      if (state.salon) {
+        newObj.salon = false;
+      } else newObj.salon = true;
       newState = Object.assign({}, state, newObj);
       return newState;
     case DONATION:
       if (state.salon) {
-        newObj.salon = !state.salon;
+        newObj.salon = false;
       }
       if (state.barber) {
-        newObj.barber = !state.barber;
+        newObj.barber = false;
       }
-      newObj.donation = !state.donation;
+      if (state.donation) {
+        newObj.donation = false;
+      } else newObj.donation = true;
       newState = Object.assign({}, state, newObj);
       return newState;
     default:

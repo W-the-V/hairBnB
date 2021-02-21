@@ -12,7 +12,7 @@ import { changeMenu } from "../../store/showMenu";
 function Navigation({ isLoaded }) {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
-  const menuState = useSelector((state) => state.menu);
+  const menuState = useSelector((state) => state.menu.open);
 
   const sessionLinks = <ProfileButton user={sessionUser} />;
   const openMenu = () => {

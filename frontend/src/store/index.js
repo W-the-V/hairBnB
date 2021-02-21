@@ -2,15 +2,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 import sessionReducer from "./session";
-import loginModalReducer from "./loginModal";
-import signUpModalReducer from "./signUpModal";
+import modalReducer from "./Modals";
 import menuReducer from "./showMenu";
 import searchTabReducer from "./searchTab";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  login: loginModalReducer,
-  signup: signUpModalReducer,
+  modal: modalReducer,
   menu: menuReducer,
   searchTab: searchTabReducer,
 });

@@ -2,17 +2,21 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import { activateLogin, deactivateLogin } from "../../store/loginModal";
-import { activateSignUp, deactivateSignUp } from "../../store/signUpModal";
+import {
+  activateLogin,
+  deactivateLogin,
+  activateSignUp,
+  deactivateSignUp,
+} from "../../store/Modals";
 import LoginModal from "../LoginModal";
 import SignUpModal from "../SignUpModal";
 import { changeMenu } from "../../store/showMenu";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
-  const loginState = useSelector((state) => state.login);
-  const signUpState = useSelector((state) => state.signup);
-  const menuState = useSelector((state) => state.menu);
+  const loginState = useSelector((state) => state.modal.login);
+  const signUpState = useSelector((state) => state.modal.signup);
+  const menuState = useSelector((state) => state.menu.open);
 
   useEffect(() => {
     if (!menuState) return;
