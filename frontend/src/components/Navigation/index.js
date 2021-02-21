@@ -21,15 +21,23 @@ function Navigation({ isLoaded }) {
   return (
     <>
       <div className="navBar">
-        <NavLink exact to="/">
+        <NavLink exact to="/" className="homeLink">
           <button className="homeButton">
             <img className="logoText" src={src}></img>
           </button>
         </NavLink>
-        <button className="navButton" onClick={() => openMenu()}>
-          <i className="fas fa-bars"></i>
-          <i className="fas fa-user-circle" />
-        </button>
+        {menuState && (
+          <button className="navButton active" onClick={() => openMenu()}>
+            <i className="fas fa-bars"></i>
+            <i className="fas fa-user-circle" />
+          </button>
+        )}
+        {!menuState && (
+          <button className="navButton" onClick={() => openMenu()}>
+            <i className="fas fa-bars"></i>
+            <i className="fas fa-user-circle" />
+          </button>
+        )}
       </div>
       <div className="userMenuShell">{isLoaded && sessionLinks}</div>
     </>
