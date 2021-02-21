@@ -55,9 +55,6 @@ function ProfileButton({ user }) {
             <NavLink to="/signup">
               <button className="menuButton">Saved</button>
             </NavLink>
-            <NavLink to="/signup">
-              <button className="menuButton">Demo</button>
-            </NavLink>
           </nav>
           <nav className="menuSection">
             <NavLink to="/signup">
