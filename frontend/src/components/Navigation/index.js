@@ -21,7 +21,7 @@ function Navigation({ isLoaded }) {
   };
 
   return (
-    <>
+    <div className="navOuterShell">
       <div className="navBar">
         <NavLink exact to="/" className="homeLink">
           <button className="homeButton">
@@ -46,7 +46,7 @@ function Navigation({ isLoaded }) {
         <SearchBar />
       </div>
       <div className="userMenuShell">{isLoaded && sessionLinks}</div>
-    </>
+    </div>
   );
 }
 

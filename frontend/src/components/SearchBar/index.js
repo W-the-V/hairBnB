@@ -9,10 +9,12 @@ function SearchBar() {
     <>
       {tabState.barber && (
         <div className="search-bar">
-          <h2>HELLO FROM BARBER</h2>
-          <form className="search-form" onSubmit={handleSubmit}>
-            <button type="submit" className="searchSubmit">
-              <i className="fas fa-search">B</i>
+          <div className="searchTitle">
+            <h1>Barbershop search</h1>
+          </div>
+          <form className="searchForm" onSubmit={handleSubmit}>
+            <button className="modalButton" type="submit">
+              Search
             </button>
           </form>
         </div>
