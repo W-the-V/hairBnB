@@ -187,3 +187,10 @@
   width: 155px;
   margin-left: 50px;
 }
+.search-bar {
+  color: black;
+  background: blue;
+  height: 400px;
+  width: 400px;
+  z-index: 2;
+}

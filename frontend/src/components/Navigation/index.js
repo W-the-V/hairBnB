@@ -1,8 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import SearchBar from "../SearchTabs";
+import SearchTabs from "../SearchTabs";
+import SearchBar from "../SearchBar";
 import ProfileButton from "./ProfileButton";
 import "./Navigation.css";
 import src from "../../images/logotext.png";
@@ -28,7 +28,7 @@ function Navigation({ isLoaded }) {
             <img className="logoText" src={src}></img>
           </button>
         </NavLink>
-        <SearchBar />
+        <SearchTabs />
         {menuState && (
           <button className="navButton active" onClick={() => openMenu()}>
             <i className="fas fa-bars"></i>
@@ -42,7 +42,9 @@ function Navigation({ isLoaded }) {
           </button>
         )}
       </div>
-      <div className="searchShell"></div>
+      <div className="searchShell">
+        <SearchBar />
+      </div>
       <div className="userMenuShell">{isLoaded && sessionLinks}</div>
     </>
   );

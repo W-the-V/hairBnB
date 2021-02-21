@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   barberToggle,
   salonToggle,
   donationToggle,
 } from "../../store/searchTab";
 
-function SearchBar() {
+function SearchTabs() {
   const dispatch = useDispatch();
   return (
     <div className="searchTabs">
@@ -22,4 +21,4 @@ function SearchBar() {
     </div>
   );
 }
-export default SearchBar;
+export default SearchTabs;

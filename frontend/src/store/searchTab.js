@@ -20,22 +20,39 @@ export const donationToggle = () => {
 
 const initialState = { barber: false, salon: false, donation: false };
 const searchTabReducer = (state = initialState, action) => {
+  let newState;
+  let newObj = {};
   switch (action.type) {
     case BARBER:
-      if (state.salon) state.salon = !state.salon;
-      if (state.donation) state.donation = !state.donation;
-      state.barber = !state.barber;
-      return state;
+      if (state.salon) {
+        newObj.salon = !state.salon;
+      }
+      if (state.donation) {
+        newObj.donation = !state.donation;
+      }
+      newObj.barber = !state.barber;
+      newState = Object.assign({}, state, newObj);
+      return newState;
     case SALON:
-      if (state.barber) state.barber = !state.barber;
-      if (state.donation) state.donation = !state.donation;
-      state.salon = !state.salon;
-      return state;
+      if (state.barber) {
+        newObj.barber = !state.barber;
+      }
+      if (state.donation) {
+        newObj.donation = !state.donation;
+      }
+      newObj.salon = !state.salon;
+      newState = Object.assign({}, state, newObj);
+      return newState;
     case DONATION:
-      if (state.barber) state.barber = !state.barber;
-      if (state.salon) state.salon = !state.salon;
-      state.donation = !state.donation;
-      return state;
+      if (state.salon) {
+        newObj.salon = !state.salon;
+      }
+      if (state.barber) {
+        newObj.barber = !state.barber;
+      }
+      newObj.donation = !state.donation;
+      newState = Object.assign({}, state, newObj);
+      return newState;
     default:
       return state;
   }
