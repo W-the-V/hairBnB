@@ -26,6 +26,7 @@
   background-color: Black;
   border-radius: 12px;
   margin-bottom: 10px;
+  cursor: default;
 }
 .largeButton {
   cursor: pointer;
