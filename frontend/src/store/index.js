@@ -5,12 +5,14 @@ import sessionReducer from "./session";
 import loginModalReducer from "./loginModal";
 import signUpModalReducer from "./signUpModal";
 import menuReducer from "./showMenu";
+import searchTabReducer from "./searchTab";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   login: loginModalReducer,
   signup: signUpModalReducer,
   menu: menuReducer,
+  searchTab: searchTabReducer,
 });
 
 let enhancer;
