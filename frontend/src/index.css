@@ -4,3 +4,6 @@ body {
   color: white;
   box-sizing: border-box;
 }
+#root {
+  height: 0px;
+}

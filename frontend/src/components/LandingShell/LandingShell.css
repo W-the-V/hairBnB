@@ -5,11 +5,15 @@
   background-image: url("../../images/shellimage.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   height: 550px;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   z-index: -1;
   min-width: 830px;
 }
