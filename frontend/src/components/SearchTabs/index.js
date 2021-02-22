@@ -65,10 +65,13 @@ function SearchTabs() {
     document
       .querySelector(".LandingShell")
       .addEventListener("click", closeMenu);
-
+    document.querySelector(".homeButton").addEventListener("click", closeMenu);
     return () => {
       document
         .querySelector(".LandingShell")
+        .removeEventListener("click", closeMenu);
+      document
+        .querySelector(".homeButton")
         .removeEventListener("click", closeMenu);
     };
   }, [tabState]);
