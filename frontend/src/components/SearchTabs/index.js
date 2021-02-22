@@ -1,4 +1,6 @@
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import {
   barberToggle,
   salonToggle,
@@ -6,7 +8,32 @@ import {
 } from "../../store/searchTab";
 
 function SearchTabs() {
+  const tabState = useSelector((state) => state.searchTab);
   const dispatch = useDispatch();
+  useEffect(() => {
+    if (!tabState.barber && !tabState.salon && !tabState.donation) return;
+    const closeMenu = () => {
+      if (tabState.barber) {
+        dispatch(barberToggle());
+      }
+      if (tabState.donation) {
+        dispatch(donationToggle());
+      }
+      if (tabState.salon) {
+        dispatch(salonToggle());
+      }
+    };
+
+    document
+      .querySelector(".LandingShell")
+      .addEventListener("click", closeMenu);
+
+    return () => {
+      document
+        .querySelector(".LandingShell")
+        .removeEventListener("click", closeMenu);
+    };
+  }, [tabState]);
   return (
     <div className="searchTabs">
       <button

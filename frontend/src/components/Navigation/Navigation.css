@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  min-width: 760px;
   justify-content: space-between;
   position: fixed;
   height: 80px;

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 510px;
+  width: 525px;
   height: auto;
   padding: 0;
   font-size: 14px;
@@ -11,6 +11,11 @@
 .searchTitle {
   margin: 0px;
   font-size: 22px;
+  width: 500px;
+  border-bottom: 2px solid lightgray;
+  text-align: center;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .searchForm {
   display: flex;
@@ -34,16 +39,33 @@
 }
 .searchButton {
   box-sizing: border-box;
-  width: 10%;
   text-decoration: none;
   border: none;
   background-color: rgb(24, 24, 24);
   color: rgb(255, 255, 255);
   font-size: 20px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   text-align: center;
   cursor: pointer;
   align-self: center;
+}
+.navOuterShell {
+  height: 0px;
+}
+.timeInput {
+  cursor: text;
+}
+.searchIcon {
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  background-color: rgb(24, 24, 24);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  align-self: center;
+  width: 40px;
+  height: 40px;
 }

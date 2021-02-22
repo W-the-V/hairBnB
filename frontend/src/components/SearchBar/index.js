@@ -23,9 +23,9 @@ function SearchBar() {
             </div>
             <div className="search-div">
               <label className="search-label">Time</label>
-              <input type="time" className="search-input"></input>
+              <input type="time" className="search-input timeInput"></input>
             </div>
-            <button className="searchButton" type="submit">
+            <button className="searchIcon" type="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
@@ -47,9 +47,9 @@ function SearchBar() {
             </div>
             <div className="search-div">
               <label className="search-label">Time</label>
-              <input type="time" className="search-input"></input>
+              <input type="time" className="search-input timeInput"></input>
             </div>
-            <button className="searchButton" type="submit">
+            <button className="searchIcon" type="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
@@ -71,9 +71,9 @@ function SearchBar() {
             </div>
             <div className="search-div">
               <label className="search-label">Time</label>
-              <input type="time" className="search-input"></input>
+              <input type="time" className="search-input timeInput"></input>
             </div>
-            <button className="searchButton" type="submit">
+            <button className="searchIcon" type="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
