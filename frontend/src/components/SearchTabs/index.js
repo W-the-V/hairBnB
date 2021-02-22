@@ -11,6 +11,21 @@ function SearchTabs() {
   const tabState = useSelector((state) => state.searchTab);
   const dispatch = useDispatch();
   useEffect(() => {
+    if (!tabState.barber) {
+      document
+        .getElementById("barberButton")
+        .setAttribute("class", "navButton searchButton");
+    }
+    if (!tabState.salon) {
+      document
+        .getElementById("salonButton")
+        .setAttribute("class", "navButton searchButton");
+    }
+    if (!tabState.donation) {
+      document
+        .getElementById("donationButton")
+        .setAttribute("class", "navButton searchButton ");
+    }
     if (!tabState.barber && !tabState.salon && !tabState.donation) return;
     const closeMenu = () => {
       if (tabState.barber) {
