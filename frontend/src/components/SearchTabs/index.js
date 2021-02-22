@@ -62,13 +62,11 @@ function SearchTabs() {
         .getElementById("salonButton")
         .setAttribute("class", "navButton searchButton active");
     }
-    document
-      .querySelector(".LandingShell")
-      .addEventListener("click", closeMenu);
+    document.querySelector(".bodyShell").addEventListener("click", closeMenu);
     document.querySelector(".homeButton").addEventListener("click", closeMenu);
     return () => {
       document
-        .querySelector(".LandingShell")
+        .querySelector(".bodyShell")
         .removeEventListener("click", closeMenu);
       document
         .querySelector(".homeButton")
