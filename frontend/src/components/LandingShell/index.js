@@ -5,7 +5,7 @@ function LandingShell() {
   return (
     <div className="LandingShell">
       <div className="localBox">
-        <p className="largeText">Shop Local</p>
+        <p className="largeText">Local Spots</p>
         <button className="largeButton" onClick={() => console.log("Hello!")}>
           Explore local options
         </button>

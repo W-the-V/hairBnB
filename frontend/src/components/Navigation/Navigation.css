@@ -213,3 +213,13 @@
   width: fit-content;
   border: none;
 }
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 400ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateY(-200px);
+}
