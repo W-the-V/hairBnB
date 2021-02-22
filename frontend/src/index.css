@@ -7,3 +7,11 @@ body {
 #root {
   height: 0px;
 }
+.bodyShell {
+  z-index: -1;
+  position: relative;
+  top: 10%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}

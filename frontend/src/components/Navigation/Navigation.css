@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
 }
 .userMenuShell {
   display: flex;
@@ -34,6 +35,7 @@
   margin-top: 10px;
   padding: 8px 0px;
   pointer-events: auto;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
 }
 
 .navButton,

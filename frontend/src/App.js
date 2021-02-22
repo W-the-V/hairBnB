@@ -5,6 +5,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import LandingShell from "./components/LandingShell";
 import AmenitiesList from "./components/AmenitiesList";
+import TravelSection from "./components/TravelSection";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,8 +17,11 @@ function App() {
   return (
     <>
       <Navigation isLoaded={isLoaded} />
-      <LandingShell />
-      <AmenitiesList />
+      <div className="bodyShell">
+        <LandingShell />
+        <AmenitiesList />
+        <TravelSection />
+      </div>
     </>
   );
 }
