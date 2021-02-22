@@ -202,3 +202,13 @@
   flex-direction: column;
   align-items: center;
 }
+.searchTabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+}
+.searchButton {
+  width: fit-content;
+  border: none;
+}

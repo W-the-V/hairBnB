@@ -9,13 +9,22 @@ function SearchTabs() {
   const dispatch = useDispatch();
   return (
     <div className="searchTabs">
-      <button className="searchBtn" onClick={() => dispatch(barberToggle())}>
+      <button
+        className="navButton searchButton"
+        onClick={() => dispatch(barberToggle())}
+      >
         Barbershops
       </button>
-      <button className="searchBtn" onClick={() => dispatch(salonToggle())}>
+      <button
+        className="navButton searchButton"
+        onClick={() => dispatch(salonToggle())}
+      >
         Salons
       </button>
-      <button className="searchBtn" onClick={() => dispatch(donationToggle())}>
+      <button
+        className="navButton searchButton"
+        onClick={() => dispatch(donationToggle())}
+      >
         Hair Donation
       </button>
     </div>
