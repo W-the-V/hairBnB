@@ -84,7 +84,8 @@
   text-decoration: none;
   color: black;
 }
-.aboutTitle:hover {
+.aboutTitle:hover,
+.aboutTitle.active {
   background-color: #ddddddcc;
 }
 .devMenu {

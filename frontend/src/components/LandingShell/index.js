@@ -6,6 +6,31 @@ import { changeDeveloper } from "../../store/showMenu";
 function LandingShell() {
   const dispatch = useDispatch();
   const devState = useSelector((state) => state.menu.developer);
+  useEffect(() => {
+    const closeDev = () => {
+      dispatch(changeDeveloper());
+    };
+    if (devState) {
+      document
+        .querySelector(".developerButton")
+        .setAttribute("class", "developerButton active");
+      document.querySelector(".bodyShell").addEventListener("click", closeDev);
+      document.querySelector(".homeButton").addEventListener("click", closeDev);
+    } else {
+      document
+        .querySelector(".developerButton")
+        .setAttribute("class", "developerButton");
+    }
+
+    return () => {
+      document
+        .querySelector(".bodyShell")
+        .removeEventListener("click", closeDev);
+      document
+        .querySelector(".homeButton")
+        .removeEventListener("click", closeDev);
+    };
+  }, [devState]);
   return (
     <div className="LandingShell">
       <div className="localBox">
