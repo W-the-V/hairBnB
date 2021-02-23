@@ -16,34 +16,44 @@ function LandingShell() {
       </div>
       <div className="developerBox">
         {devState && (
-          <div className="menuBox">
-            <h3 className="aboutTitle">
-              Wiki :{" "}
-              <a target="_blank" href="https://github.com/W-the-V/hairBnB/wiki">
-                <i className="fas fa-book-open"></i>
-              </a>
-            </h3>
-            <h3 className="aboutTitle">
-              Github Repository :{" "}
-              <a target="_blank" href="https://github.com/W-the-V/hairBnB/">
-                <i class="fas fa-book"></i>
-              </a>
-            </h3>
-            <h3 className="aboutTitle">
-              Developer Github :{" "}
-              <a target="_blank" href="https://github.com/W-the-V/">
-                <i class="fab fa-github-square"></i>
-              </a>
-            </h3>
-            <h3 className="aboutTitle">
-              Developer LinkedIn :{" "}
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/walter-hills-a52535205/"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </h3>
+          <div className="menuBox devMenu">
+            <a
+              className="aboutLink"
+              target="_blank"
+              href="https://github.com/W-the-V/hairBnB/wiki"
+            >
+              <h3 className="aboutTitle">
+                Wiki <i className="fas fa-book-open aboutIcon"></i>
+              </h3>
+            </a>
+            <a
+              className="aboutLink"
+              target="_blank"
+              href="https://github.com/W-the-V/hairBnB/"
+            >
+              <h3 className="aboutTitle">
+                Github Repository <i className="fas fa-book aboutIcon"></i>
+              </h3>
+            </a>
+            <a
+              className="aboutLink"
+              target="_blank"
+              href="https://github.com/W-the-V/"
+            >
+              <h3 className="aboutTitle">
+                Developer Github{" "}
+                <i className="fab fa-github-square aboutIcon"></i>
+              </h3>
+            </a>
+            <a
+              className="aboutLink"
+              target="_blank"
+              href="https://www.linkedin.com/in/walter-hills-a52535205/"
+            >
+              <h3 className="aboutTitle">
+                Developer LinkedIn <i className="fab fa-linkedin aboutIcon"></i>
+              </h3>
+            </a>
           </div>
         )}
         <button

@@ -56,6 +56,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
 }
 .developerButton {
   cursor: pointer;
@@ -72,7 +74,27 @@
   width: 500px;
   height: 60px;
   margin-right: 30px;
+  pointer-events: auto;
 }
 .developerButton:hover {
   background-color: #ddddddcc;
+}
+.aboutLink {
+  text-decoration: none;
+  color: black;
+}
+.aboutTitle:hover {
+  background-color: #ddddddcc;
+}
+.devMenu {
+  margin-bottom: 20px;
+  width: 200px;
+  padding: 20px;
+}
+.aboutIcon {
+  font-size: 20px;
+}
+.aboutTitle {
+  margin: 0;
+  margin-top: 10px;
 }
