@@ -75,6 +75,7 @@
   height: 60px;
   margin-right: 30px;
   pointer-events: auto;
+  z-index: 2;
 }
 .developerButton:hover {
   background-color: #ddddddcc;
@@ -88,13 +89,17 @@
 }
 .devMenu {
   margin-bottom: 20px;
-  width: 200px;
-  padding: 20px;
+  width: 220px;
+  z-index: 2;
 }
 .aboutIcon {
   font-size: 20px;
 }
 .aboutTitle {
+  height: 25px;
+  padding-left: 10px;
+  width: 95%;
   margin: 0;
+  margin-right: 50px;
   margin-top: 10px;
 }
