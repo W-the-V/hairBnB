@@ -71,15 +71,15 @@
   z-index: -1;
   margin-bottom: 30px;
 }
-.developerButton:hover {
+.developerButton:hover,
+.developerButton.active {
   background-color: #ddddddcc;
 }
 .aboutLink {
   text-decoration: none;
   color: black;
 }
-.aboutTitle:hover,
-.aboutTitle.active {
+.aboutTitle:hover {
   background-color: #ddddddcc;
 }
 .devMenu {
