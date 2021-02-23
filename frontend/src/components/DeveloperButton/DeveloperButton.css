@@ -1,27 +1,19 @@
-.LandingShell {
+.developerButtonShell {
+  z-index: -1;
+  pointer-events: none;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  background-image: url("../../images/shellimage.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  height: 550px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  z-index: -1;
-  min-width: 830px;
+  width: 100%;
+  height: 700px;
 }
+
 .localBox {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 72px;
   width: 180px;
   margin-left: 80px;
@@ -46,6 +38,7 @@
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   border: 1px solid rgb(221, 221, 221);
+  pointer-events: auto;
 }
 .largeButton:hover {
   background-color: #ddddddcc;
@@ -76,6 +69,7 @@
   margin-right: 30px;
   pointer-events: auto;
   z-index: 2;
+  margin-bottom: 15px;
 }
 .developerButton:hover {
   background-color: #ddddddcc;

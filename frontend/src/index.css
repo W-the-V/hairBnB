@@ -7,11 +7,33 @@ body {
 #root {
   height: 0px;
 }
-.bodyShell {
-  z-index: -1;
+.bodyShell,
+.bodyShellLower {
+  z-index: -2;
   position: relative;
   top: 10%;
   left: 0;
   right: 0;
   width: 99%;
+}
+.LandingShell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("./images/shellimage.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  width: 100vw;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: -2;
+  min-width: 830px;
 }

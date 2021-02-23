@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import LandingShell from "./components/LandingShell";
+import DeveloperButton from "./components/DeveloperButton";
 import AmenitiesList from "./components/AmenitiesList";
 import TravelSection from "./components/TravelSection";
 
@@ -18,7 +18,10 @@ function App() {
     <>
       <Navigation isLoaded={isLoaded} />
       <div className="bodyShell">
-        <LandingShell />
+        <div className="LandingShell" />
+      </div>
+      <DeveloperButton />
+      <div className="bodyShellLower">
         <AmenitiesList />
         <TravelSection />
       </div>

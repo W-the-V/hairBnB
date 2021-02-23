@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "./LandingShell.css";
+import "./DeveloperButton.css";
 import { changeDeveloper } from "../../store/showMenu";
 
-function LandingShell() {
+function DeveloperButton() {
   const dispatch = useDispatch();
   const devState = useSelector((state) => state.menu.developer);
   useEffect(() => {
@@ -15,6 +15,9 @@ function LandingShell() {
         .querySelector(".developerButton")
         .setAttribute("class", "developerButton active");
       document.querySelector(".bodyShell").addEventListener("click", closeDev);
+      document
+        .querySelector(".bodyShellLower")
+        .addEventListener("click", closeDev);
       document.querySelector(".homeButton").addEventListener("click", closeDev);
     } else {
       document
@@ -29,10 +32,13 @@ function LandingShell() {
       document
         .querySelector(".homeButton")
         .removeEventListener("click", closeDev);
+      document
+        .querySelector(".bodyShellLower")
+        .removeEventListener("click", closeDev);
     };
   }, [devState]);
   return (
-    <div className="LandingShell">
+    <div className="developerButtonShell">
       <div className="localBox">
         <p className="largeText">Local Spots</p>
         <button className="largeButton" onClick={() => console.log("Hello!")}>
@@ -92,4 +98,4 @@ function LandingShell() {
   );
 }
 
-export default LandingShell;
+export default DeveloperButton;
