@@ -2,7 +2,9 @@ import "./TravelSection.css";
 function TravelSection() {
   return (
     <>
-      <h2 className="travelTitle">Travel</h2>
+      <div className="titleBox">
+        <h2 className="travelTitle">Travel</h2>
+      </div>
       <div className="travelShell">
         <div className="travelBlock">
           <div className="travelImageShell">
