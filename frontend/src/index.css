@@ -37,3 +37,6 @@ body {
   z-index: -2;
   min-width: 830px;
 }
+.testDiv {
+  color: black;
+}

@@ -1,9 +1,12 @@
+import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./searchBar.css";
 function SearchBar() {
+  const history = useHistory();
   const tabState = useSelector((state) => state.searchTab);
   const handleSubmit = (e) => {
     e.preventDefault();
+    history.push("/search");
   };
   return (
     <>
