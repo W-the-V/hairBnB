@@ -1,11 +1,14 @@
 import { useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { changePage } from "../../store/pagestate";
 import "./searchBar.css";
 function SearchBar() {
+  const dispatch = useDispatch();
   const history = useHistory();
   const tabState = useSelector((state) => state.searchTab);
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(changePage("Search"));
     history.push("/search");
   };
   return (

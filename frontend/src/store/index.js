@@ -5,12 +5,14 @@ import sessionReducer from "./session";
 import modalReducer from "./Modals";
 import menuReducer from "./showMenu";
 import searchTabReducer from "./searchTab";
+import pageReducer from "./pagestate";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   modal: modalReducer,
   menu: menuReducer,
   searchTab: searchTabReducer,
+  page: pageReducer,
 });
 
 let enhancer;
