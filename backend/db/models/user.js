@@ -32,6 +32,24 @@ module.exports = (sequelize, DataTypes) => {
           len: [60, 60],
         },
       },
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [3, 20],
+        },
+      },
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [3, 30],
+        },
+      },
+      profilePicture: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     },
     {
       defaultScope: {
