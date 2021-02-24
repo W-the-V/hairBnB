@@ -7,17 +7,6 @@ import * as sessionActions from "../../store/session";
 
 Modal.setAppElement(document.getElementById("root"));
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 function SignUpModal() {
   const dispatch = useDispatch();
   const signUpState = useSelector((state) => state.modal.signup);
@@ -60,7 +49,6 @@ function SignUpModal() {
           isOpen={signUpState}
           onRequestClose={onclick}
           contentLabel="Login"
-          style={customStyles}
           className="defaultInner"
           overlayClassName="defaultOuter"
         >

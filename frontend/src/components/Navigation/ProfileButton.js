@@ -8,14 +8,10 @@ import {
   activateSignUp,
   deactivateSignUp,
 } from "../../store/Modals";
-import LoginModal from "../LoginModal";
-import SignUpModal from "../SignUpModal";
 import { changeMenu } from "../../store/showMenu";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
-  const loginState = useSelector((state) => state.modal.login);
-  const signUpState = useSelector((state) => state.modal.signup);
   const menuState = useSelector((state) => state.menu.open);
 
   useEffect(() => {
@@ -83,8 +79,6 @@ function ProfileButton({ user }) {
           </nav>
         </div>
       )}
-      {loginState && !user && <LoginModal />}
-      {signUpState && !user && <SignUpModal />}
       {menuState && !user && (
         <div className="menuBox">
           <div className="menuSection">

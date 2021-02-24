@@ -7,11 +7,15 @@ import DeveloperButton from "./components/DeveloperButton";
 import AmenitiesList from "./components/AmenitiesList";
 import TravelSection from "./components/TravelSection";
 import SearchModal from "./components/SearchModal";
+import LoginModal from "./components/LoginModal";
+import SignUpModal from "./components/SignUpModal";
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
   const searchState = useSelector((state) => state.modal.search);
+  const loginState = useSelector((state) => state.modal.login);
+  const signUpState = useSelector((state) => state.modal.signup);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -19,6 +23,8 @@ function App() {
   return (
     <>
       <Navigation isLoaded={isLoaded} />
+      {loginState && <LoginModal />}
+      {signUpState && <SignUpModal />}
       {searchState && <SearchModal />}
       <div className="bodyShell">
         <div className="LandingShell" />
