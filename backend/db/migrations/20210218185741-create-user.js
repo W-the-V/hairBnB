@@ -27,11 +27,11 @@ module.exports = {
         allowNull: false,
       },
       lastName: {
-        type: DataTypes.STRING(30),
+        type: Sequelize.STRING(30),
         allowNull: false,
       },
       profilePicture: {
-        type: DataTypes.STRING(256),
+        type: Sequelize.STRING(256),
         allowNull: true,
       },
       createdAt: {

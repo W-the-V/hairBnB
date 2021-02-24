@@ -24,6 +24,8 @@ function SignUpModal() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const onclick = () => {
@@ -34,7 +36,13 @@ function SignUpModal() {
     if (password === confirmPassword) {
       setErrors([]);
       return dispatch(
-        sessionActions.signup({ email, username, password })
+        sessionActions.signup({
+          email,
+          username,
+          password,
+          firstName,
+          lastName,
+        })
       ).catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
@@ -82,6 +90,28 @@ function SignUpModal() {
                   value={username}
                   className="formInput"
                   onChange={(e) => setUsername(e.target.value)}
+                  required
+                  className="formInput"
+                />
+              </div>
+              <div className="inputBox">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  value={firstName}
+                  className="formInput"
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
+                  className="formInput"
+                />
+              </div>
+              <div className="inputBox">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  value={lastName}
+                  className="formInput"
+                  onChange={(e) => setLastName(e.target.value)}
                   required
                   className="formInput"
                 />
