@@ -109,7 +109,7 @@
   align-items: center;
   border: none;
 }
-.ReactModal__Content--after-open {
+.defaultInner {
   display: flex;
   flex-direction: column;
   color: rgb(24, 24, 24);
@@ -121,6 +121,20 @@
   width: 100%;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+}
+.defaultOuter {
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  height: 1100px;
+  width: 100vw;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .LoginShell {
   height: 100%;
@@ -220,11 +234,10 @@
 .ReactModal__Overlay {
   opacity: 0;
   transform: translateY(0px);
-  transition: all 400ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  height: 1200px;
-  transform: translateY(-200px);
+  transform: translateY(-300px);
 }

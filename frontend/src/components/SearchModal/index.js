@@ -4,23 +4,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { deactivateLogin } from "../../store/Modals";
 import * as sessionActions from "../../store/session";
+import { deactivateSearch } from "../../store/Modals";
+
+import "./SearchModal.css";
 
 Modal.setAppElement(document.getElementById("root"));
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
+    height: "100%",
+    width: "100%",
   },
 };
 
-const LoginModal = () => {
+const SearchModal = () => {
   const dispatch = useDispatch();
-  const loginState = useSelector((state) => state.modal.login);
+  const loginState = useSelector((state) => state.modal.search);
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -37,7 +39,7 @@ const LoginModal = () => {
   };
 
   const onclick = () => {
-    dispatch(deactivateLogin());
+    dispatch(deactivateSearch());
   };
 
   return (
@@ -47,8 +49,8 @@ const LoginModal = () => {
         onRequestClose={onclick}
         contentLabel="Login"
         style={customStyles}
-        className="defaultInner"
-        overlayClassName="defaultOuter"
+        className="SearchOuter"
+        overlayClassName="SearchInner"
       >
         <div className="LoginShell">
           <div className="formTitle">
@@ -89,4 +91,4 @@ const LoginModal = () => {
     </>
   );
 };
-export default LoginModal;
+export default SearchModal;

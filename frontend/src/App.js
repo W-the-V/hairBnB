@@ -6,41 +6,28 @@ import Navigation from "./components/Navigation";
 import DeveloperButton from "./components/DeveloperButton";
 import AmenitiesList from "./components/AmenitiesList";
 import TravelSection from "./components/TravelSection";
+import SearchModal from "./components/SearchModal";
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+  const searchState = useSelector((state) => state.modal.search);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <Navigation isLoaded={isLoaded} />
-          <div className="bodyShell">
-            <div className="LandingShell" />
-          </div>
-          <DeveloperButton />
-          <div className="bodyShellLower">
-            <AmenitiesList />
-            <TravelSection />
-          </div>
-        </Route>
-        <Route exact path="/search">
-          <Navigation isLoaded={isLoaded} />
-          <DeveloperButton />
-          <div className="bodyShell">HELLO FROM SEARCH</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">HELLO TEST</div>
-          <div className="testDiv">{}</div>
-        </Route>
-      </Switch>
+      <Navigation isLoaded={isLoaded} />
+      {searchState && <SearchModal />}
+      <div className="bodyShell">
+        <div className="LandingShell" />
+      </div>
+      <DeveloperButton />
+      <div className="bodyShellLower">
+        <AmenitiesList />
+        <TravelSection />
+      </div>
     </>
   );
 }

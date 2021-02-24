@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./DeveloperButton.css";
 import { changeDeveloper } from "../../store/showMenu";
-
 function DeveloperButton() {
   const dispatch = useDispatch();
   const devState = useSelector((state) => state.menu.developer);

@@ -61,6 +61,8 @@ function SignUpModal() {
           onRequestClose={onclick}
           contentLabel="Login"
           style={customStyles}
+          className="defaultInner"
+          overlayClassName="defaultOuter"
         >
           <div className="LoginShell">
             <div className="formTitle">
