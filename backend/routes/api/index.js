@@ -1,16 +1,28 @@
 const router = require("express").Router();
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
+const { gapi } = require("../../config");
 
 const asyncHandler = require("express-async-handler");
 const { setTokenCookie } = require("../../utils/auth.js");
 const { User } = require("../../db/models");
 
+// import { Loader } from "@googlemaps/js-api-loader";
+
 router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
 
-
+router.get(
+  "/",
+  asyncHandler(async (req, res, next) => {
+    // const loader = new Loader({
+    //   apiKey: gapi,
+    //   version: "weekly",
+    // });
+    return res.json(gapi);
+  })
+);
 
 module.exports = router;
 // router.post("/test", function (req, res) {

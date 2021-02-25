@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/W-the-V/hairBnB/issues"
   },
-  "homepage": "https://github.com/W-the-V/hairBnB#readme"
+  "homepage": "https://github.com/W-the-V/hairBnB#readme",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.1"
+  }
 }
