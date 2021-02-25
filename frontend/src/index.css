@@ -76,5 +76,5 @@ body {
 
 .ReactModal__Content--after-open {
   opacity: 1;
-  transform: translateY(-100px);
+  transform: translateY(0px);
 }

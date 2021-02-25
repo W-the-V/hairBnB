@@ -1,6 +1,59 @@
-.searchOuter {
+.SearchModalShell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
-.searchInner {
-  height: 500px;
-  width: 500px;
+.SearchModalOuter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.SearchModalInner {
+  margin-top: 15%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: rgb(24, 24, 24);
+  align-items: center;
+  background: #ffffff none repeat scroll 0% 0%;
+  height: fit-content;
+  width: 95%;
+  height: 80%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+}
+.SearchModalOuterBox {
+  color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.SearchResults {
+  border-right: 5px solid black;
+  width: 30%;
+  overflow-y: scroll;
+}
+.Map {
+  width: 70%;
 }

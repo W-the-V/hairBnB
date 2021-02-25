@@ -25,7 +25,7 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {loginState && <LoginModal />}
       {signUpState && <SignUpModal />}
-      {searchState && <SearchModal />}
+
       <div className="bodyShell">
         <div className="LandingShell" />
       </div>

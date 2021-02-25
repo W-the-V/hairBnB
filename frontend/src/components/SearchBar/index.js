@@ -1,9 +1,9 @@
-import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { changePage } from "../../store/pagestate";
 import "./searchBar.css";
 import { activateSearch } from "../../store/Modals";
+import SearchModal from "../SearchModal";
 function SearchBar() {
+  const searchState = useSelector((state) => state.modal.search);
   const dispatch = useDispatch();
   const tabState = useSelector((state) => state.searchTab);
   const handleSubmit = (e) => {
@@ -84,6 +84,7 @@ function SearchBar() {
           </form>
         </div>
       )}
+      {searchState && <SearchModal />}
     </>
   );
 }
