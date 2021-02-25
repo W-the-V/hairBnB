@@ -31,7 +31,7 @@ function SearchBar() {
               <input type="time" className="search-input timeInput"></input>
             </div>
             <button className="searchIcon" type="submit">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </form>
         </div>

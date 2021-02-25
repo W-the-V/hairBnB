@@ -28,7 +28,7 @@
   margin-right: -50vw;
 }
 .SearchModalInner {
-  margin-top: 15%;
+  margin-top: 10%;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   background: #ffffff none repeat scroll 0% 0%;
   height: fit-content;
   width: 95%;
-  height: 80%;
+  height: 75%;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
 }

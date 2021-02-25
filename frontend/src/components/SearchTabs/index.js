@@ -80,6 +80,7 @@ function SearchTabs() {
         id="barberButton"
         onClick={() => dispatch(barberToggle())}
       >
+        <i className="fas fa-search"></i>
         Barbershops
       </button>
       <button
@@ -87,6 +88,7 @@ function SearchTabs() {
         id="salonButton"
         onClick={() => dispatch(salonToggle())}
       >
+        <i className="fas fa-search"></i>
         Salons
       </button>
       <button
@@ -94,6 +96,7 @@ function SearchTabs() {
         id="donationButton"
         onClick={() => dispatch(donationToggle())}
       >
+        <i className="fas fa-search"></i>
         Hair Donation
       </button>
     </div>

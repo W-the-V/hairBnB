@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { deactivateSearch } from "../../store/Modals";
 import * as sessionActions from "../../store/session";
+import { Loader } from "@googlemaps/js-api-loader";
+
+import { getMap } from "../../store/map";
 
 import "./SearchModal.css";
 
@@ -13,13 +16,20 @@ const SearchModal = () => {
   const dispatch = useDispatch();
   const searchState = useSelector((state) => state.modal.search);
   const tabState = useSelector((state) => state.searchTab);
-  const [credential, setCredential] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
-  let searchTerm;
-  useEffect(() => {
-    if (tabState.barber) searchTerm = "barber";
-  }, [tabState]);
+
+  useEffect(async () => {
+    const key = await getMap();
+    const loader = new Loader({
+      apiKey: key,
+      version: "weekly",
+    });
+    loader.load().then(() => {
+      new window.google.maps.Map(document.querySelector(".Map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+    });
+  }, []);
 
   const onclick = () => {
     dispatch(deactivateSearch());
@@ -35,24 +45,9 @@ const SearchModal = () => {
         overlayClassName="SearchModalOuter"
       >
         <div className="LoginShell">
-          {/* {tabState.barber && (
-            <div className="formTitle">
-              <h1>Barbershops</h1>
-            </div>
-          )}
-          {tabState.salon && (
-            <div className="formTitle">
-              <h1>Salons</h1>
-            </div>
-          )}
-          {tabState.donation && (
-            <div className="formTitle">
-              <h1>Hair Donation Centers</h1>
-            </div>
-          )} */}
           <div className="SearchModalOuterBox">
             <div className="SearchResults"></div>
-            <div className="Map">MAP GOES HERE</div>
+            <div className="Map"></div>
           </div>
         </div>
       </Modal>

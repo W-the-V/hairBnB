@@ -198,10 +198,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 500px;
+  width: 550px;
 }
 .searchButton {
   width: fit-content;
   border: none;
 }
-
+#donationButton {
+  margin-right: 0;
+}
