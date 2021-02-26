@@ -41,7 +41,9 @@ const menuReducer = (state = initialState, action) => {
       newState = Object.assign({}, state, newStatus);
       return newState;
     case SHOW_SPOT:
-      if (state.spot.status) {
+      if (state.spot.id !== action.id) {
+        newStatus.spot = { status: true, id: action.id };
+      } else if (state.spot.status) {
         newStatus.spot = { status: false, id: 0 };
       } else newStatus.spot = { status: true, id: action.id };
       newState = Object.assign({}, state, newStatus);

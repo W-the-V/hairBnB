@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { deactivateSearch } from "../../store/Modals";
 import * as sessionActions from "../../store/session";
 import { Loader } from "@googlemaps/js-api-loader";
+import { showSpot } from "../../store/showMenu";
 
 import { getMap } from "../../store/map";
 import Spots from "../Spots";
@@ -40,6 +41,9 @@ const SearchModal = () => {
   const onclick = () => {
     dispatch(deactivateSearch());
   };
+  const onclick2 = () => {
+    dispatch(showSpot());
+  };
 
   return (
     <>
@@ -57,8 +61,16 @@ const SearchModal = () => {
                 <Spots spot={spot} />
               ))}
             </div>
-            {spotStatus.status && <SpotDetail />}
             <div className="Map"></div>
+            <Modal
+              isOpen={spotStatus.status}
+              onRequestClose={onclick2}
+              contentLabel="spotDetail"
+              className="defaultInner"
+              overlayClassName="defaultOuter"
+            >
+              <SpotDetail />
+            </Modal>
           </div>
         </div>
       </Modal>
