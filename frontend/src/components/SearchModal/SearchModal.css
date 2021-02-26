@@ -10,6 +10,7 @@
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  outline: none;
 }
 .SearchModalOuter {
   display: flex;
@@ -26,6 +27,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  outline: none;
 }
 .SearchModalInner {
   margin-top: 10%;
@@ -42,6 +44,7 @@
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
   border-radius: 12px;
   padding: 5px;
+  outline: none;
 }
 .SearchModalOuterBox {
   color: black;
@@ -55,13 +58,16 @@
   border-right: 5px solid black;
   width: 30%;
   overflow-y: scroll;
+  outline: none;
 }
 .outerMap {
   width: 70%;
   height: 100%;
   border-radius: 12px;
+  outline: none;
 }
 .Map {
   width: 70%;
   border-radius: 12px;
+  outline: none;
 }

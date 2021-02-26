@@ -51,6 +51,7 @@ body {
   width: 100%;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+  outline: none;
 }
 .defaultOuter {
   display: flex;
@@ -67,14 +68,17 @@ body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  outline: none;
 }
 .ReactModal__Content {
   opacity: 0;
   transform: translateY(400px);
   transition: all 400ms ease-in-out;
+  outline: none;
 }
 
 .ReactModal__Content--after-open {
   opacity: 1;
   transform: translateY(0px);
+  outline: none;
 }

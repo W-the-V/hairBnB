@@ -13,22 +13,7 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
   z-index: 3;
 }
-.userMenuShell {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  right: 0;
-  top: 75px;
-}
-.userMenuShell {
-  width: 200px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: none;
-}
+
 .menuBox {
   background: rgb(255, 255, 255) none repeat scroll 0% 0%;
   border-radius: 12px;
@@ -53,6 +38,7 @@
   color: rgb(34, 34, 34);
   text-decoration: none;
   border-radius: 21px;
+  outline: none;
 }
 .navButton {
   margin-right: 50px;
@@ -86,6 +72,7 @@
   width: 100%;
   left: 0;
   cursor: pointer;
+  outline: none;
 }
 .menuButton:hover {
   background-color: #ddddddcc;
@@ -108,6 +95,7 @@
   flex-direction: row;
   align-items: center;
   border: none;
+  outline: none;
 }
 
 .LoginShell {
@@ -168,6 +156,7 @@
   border-radius: 12px;
   margin-top: 15px;
   cursor: pointer;
+  outline: none;
 }
 .modalButton:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
@@ -203,7 +192,20 @@
 .searchButton {
   width: fit-content;
   border: none;
+  outline: none;
 }
 #donationButton {
   margin-right: 0;
+  outline: none;
+}
+
+.userMenuShell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 75px;
+  z-index: 3;
+  margin-right: 60px;
 }

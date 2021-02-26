@@ -11,14 +11,17 @@
   background-color: white;
   cursor: pointer;
   z-index: 1;
+  outline: none;
 }
 .spotInner {
   width: 60%;
   height: 99%;
+  outline: none;
 }
 .spotImage {
   border: 2px solid black;
   border-radius: 12px;
   width: 40%;
   height: 99%;
+  outline: none;
 }

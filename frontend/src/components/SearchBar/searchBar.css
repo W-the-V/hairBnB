@@ -52,6 +52,7 @@
   text-align: center;
   cursor: pointer;
   align-self: center;
+  outline: none;
 }
 .navOuterShell {
   height: 0px;
@@ -72,6 +73,7 @@
   align-self: center;
   width: 44px;
   height: 40px;
+  outline: none;
 }
 .searchIcon:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
