@@ -40,6 +40,8 @@
   height: 75%;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+  border-radius: 12px;
+  padding: 5px;
 }
 .SearchModalOuterBox {
   color: black;
@@ -56,4 +58,5 @@
 }
 .Map {
   width: 70%;
+  border-radius: 12px;
 }

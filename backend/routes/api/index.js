@@ -24,6 +24,13 @@ router.get(
   })
 );
 
+router.get(
+  "/:id",
+  asyncHandler(async (req, res, next) => {
+    const id = req.params.id;
+  })
+);
+
 module.exports = router;
 // router.post("/test", function (req, res) {
 //   res.json({ requestBody: req.body });

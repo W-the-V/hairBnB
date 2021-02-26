@@ -1,5 +1,6 @@
 const MENU_CHANGE = "menu/change";
 const DEVELOPER_CHANGE = "developer/change";
+const SHOW_SPOT = "spot/show";
 
 export const changeMenu = () => {
   return {
@@ -11,8 +12,18 @@ export const changeDeveloper = () => {
     type: DEVELOPER_CHANGE,
   };
 };
+export const showSpot = (id) => {
+  return {
+    type: SHOW_SPOT,
+    id,
+  };
+};
 
-const initialState = { open: false, developer: false };
+const initialState = {
+  open: false,
+  developer: false,
+  spot: { status: false, id: 0 },
+};
 const menuReducer = (state = initialState, action) => {
   let newState;
   let newStatus = {};
@@ -27,6 +38,12 @@ const menuReducer = (state = initialState, action) => {
       if (state.developer) {
         newStatus.developer = false;
       } else newStatus.developer = true;
+      newState = Object.assign({}, state, newStatus);
+      return newState;
+    case SHOW_SPOT:
+      if (state.spot.status) {
+        newStatus.spot = { status: false, id: 0 };
+      } else newStatus.spot = { status: true, id: action.id };
       newState = Object.assign({}, state, newStatus);
       return newState;
     default:

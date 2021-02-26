@@ -1,0 +1,24 @@
+.spotBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  height: 200px;
+  text-decoration: none;
+  background-color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.spotInner {
+  width: 60%;
+  height: 99%;
+}
+.spotImage {
+  border: 2px solid black;
+  border-radius: 12px;
+  width: 40%;
+  height: 99%;
+}

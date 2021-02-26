@@ -7,6 +7,8 @@ import * as sessionActions from "../../store/session";
 import { Loader } from "@googlemaps/js-api-loader";
 
 import { getMap } from "../../store/map";
+import Spots from "../Spots";
+import SpotDetail from "../SpotDetail";
 
 import "./SearchModal.css";
 
@@ -16,6 +18,7 @@ const SearchModal = () => {
   const dispatch = useDispatch();
   const searchState = useSelector((state) => state.modal.search);
   const tabState = useSelector((state) => state.searchTab);
+  const spotState = useSelector((state) => state.menu.spot);
 
   useEffect(async () => {
     const key = await getMap();
@@ -23,7 +26,9 @@ const SearchModal = () => {
       apiKey: key,
       version: "weekly",
     });
-    loader.load().then(() => {
+    loader.load().then(async () => {
+      const geocoder = new window.google.maps.Geocoder();
+      const latLang = await geocoder.geocode();
       new window.google.maps.Map(document.querySelector(".Map"), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 8,
@@ -46,7 +51,10 @@ const SearchModal = () => {
       >
         <div className="LoginShell">
           <div className="SearchModalOuterBox">
-            <div className="SearchResults"></div>
+            <div className="SearchResults">
+              <Spots />
+            </div>
+            {spotState.status && <SpotDetail />}
             <div className="Map"></div>
           </div>
         </div>

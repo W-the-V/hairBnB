@@ -8,16 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      stateId: {
-        type: Sequelize.INTEGER,
-        references: { model: "States" },
-        allowNull: false,
-      },
-      cityId: {
-        type: Sequelize.INTEGER,
-        references: { model: "Cities" },
-        allowNull: false,
-      },
       price: {
         type: Sequelize.INTEGER,
         allowNull: false,
