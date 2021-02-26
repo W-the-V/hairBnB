@@ -2,6 +2,7 @@ const router = require("express").Router();
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
 const { gapi } = require("../../config");
+const db = require("../../db/models");
 
 const asyncHandler = require("express-async-handler");
 const { setTokenCookie } = require("../../utils/auth.js");
@@ -28,6 +29,16 @@ router.get(
   "/:id",
   asyncHandler(async (req, res, next) => {
     const id = req.params.id;
+    const spot = await db.Spot.findByPk(id);
+    res.json({ spot });
+  })
+);
+router.get(
+  "/type/:type",
+  asyncHandler(async (req, res, next) => {
+    const type = req.params.type;
+    const spots = await db.Spot.findAll({ where: { type } });
+    res.json({ spots });
   })
 );
 
