@@ -2,12 +2,22 @@ import { useSelector, useDispatch } from "react-redux";
 import "./searchBar.css";
 import { activateSearch } from "../../store/Modals";
 import SearchModal from "../SearchModal";
+import {
+  searchBarbers,
+  searchSalons,
+  searchDonations,
+} from "../../store/spots";
 function SearchBar() {
   const searchState = useSelector((state) => state.modal.search);
   const dispatch = useDispatch();
   const tabState = useSelector((state) => state.searchTab);
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (tabState.barber) {
+      dispatch(searchBarbers);
+    }
+    if (tabState.salon) dispatch(searchSalons);
+    if (tabState.donation) dispatch(searchDonations);
     dispatch(activateSearch());
   };
   return (

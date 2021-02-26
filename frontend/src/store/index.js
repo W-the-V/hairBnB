@@ -6,6 +6,7 @@ import modalReducer from "./Modals";
 import menuReducer from "./showMenu";
 import searchTabReducer from "./searchTab";
 import pageReducer from "./pagestate";
+import spotReducer from "./spots";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   menu: menuReducer,
   searchTab: searchTabReducer,
   page: pageReducer,
+  spotState: spotReducer,
 });
 
 let enhancer;

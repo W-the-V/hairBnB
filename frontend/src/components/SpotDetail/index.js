@@ -3,13 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import "./SpotDetail.css";
 
 function SpotDetail() {
-  const spotState = useSelector((state) => state.menu.spot);
-  useEffect(() => {
-    
-  }, []);
+  const id = useSelector((state) => state.menu.spot.id);
+  const spots = useSelector((state) => state.spotState.spots);
+  const spot = spots.find((spot) => spot.id === id);
   return (
     <div className="SpotDetailShell">
-      <div className="SpotDetailInner">IMAGE HERE</div>
+      <div>{spot.name}</div>
     </div>
   );
 }

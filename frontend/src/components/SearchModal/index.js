@@ -18,7 +18,8 @@ const SearchModal = () => {
   const dispatch = useDispatch();
   const searchState = useSelector((state) => state.modal.search);
   const tabState = useSelector((state) => state.searchTab);
-  const spotState = useSelector((state) => state.menu.spot);
+  const spotStatus = useSelector((state) => state.menu.spot);
+  const spots = useSelector((state) => state.spotState.spots);
 
   useEffect(async () => {
     const key = await getMap();
@@ -52,9 +53,11 @@ const SearchModal = () => {
         <div className="LoginShell">
           <div className="SearchModalOuterBox">
             <div className="SearchResults">
-              <Spots />
+              {spots.map((spot) => (
+                <Spots spot={spot} />
+              ))}
             </div>
-            {spotState.status && <SpotDetail />}
+            {spotStatus.status && <SpotDetail />}
             <div className="Map"></div>
           </div>
         </div>
