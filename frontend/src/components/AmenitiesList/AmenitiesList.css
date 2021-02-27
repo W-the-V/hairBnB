@@ -22,7 +22,10 @@
   margin-top: 0px;
   height: 150px;
   width: 150px;
-  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 .amenitiesTitle {
   color: black;
@@ -31,4 +34,12 @@
   margin-top: 30px;
   margin-left: 60px;
   font-size: 40px;
+}
+.amenityIco {
+  font-size: 90px;
+  height: 75%;
+}
+.amenityInfo {
+  text-align: center;
+  font-size: 18px;
 }

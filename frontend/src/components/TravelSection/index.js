@@ -1,4 +1,8 @@
 import "./TravelSection.css";
+import barber from "../../images/barbershop.png";
+import salon from "../../images/donation.png";
+import donate from "../../images/salon.png";
+
 function TravelSection() {
   return (
     <>
@@ -8,9 +12,15 @@ function TravelSection() {
       <div className="travelShell">
         <div className="travelBlock">
           <div className="travelImageShell">
-            <div className="travelImage">IMAGE HERE</div>
-            <div className="travelImage">IMAGE HERE</div>
-            <div className="travelImage">IMAGE HERE</div>
+            <div className="travelImage">
+              <img className="TravelImg" src={barber} />
+            </div>
+            <div className="travelImage">
+              <img className="TravelImg" src={salon} />
+            </div>
+            <div className="travelImage">
+              <img className="TravelImg" src={donate} />
+            </div>
             <div className="travelImage">IMAGE HERE</div>
           </div>
         </div>
