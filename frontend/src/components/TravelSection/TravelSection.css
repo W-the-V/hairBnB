@@ -25,9 +25,12 @@
   margin-bottom: 100px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 300px;
-  width: 350px;
-  border: 2px solid white;
+  height: 350px;
+  width: 305px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .travelTitle {
   color: white;
@@ -53,4 +56,14 @@
   margin-left: -50vw;
   margin-right: -50vw;
   padding-top: 20px;
+}
+.TravelImg {
+  height: 300px;
+  width: 300px;
+}
+.travelDesc {
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  font-size: 20px;
 }
