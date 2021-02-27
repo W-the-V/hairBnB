@@ -56,9 +56,10 @@
 }
 .SearchResults {
   border-right: 5px solid black;
-  width: 30%;
+  width: 40%;
   overflow-y: scroll;
   outline: none;
+  min-width: 410px;
 }
 .outerMap {
   width: 70%;

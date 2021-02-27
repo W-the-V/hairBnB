@@ -17,6 +17,9 @@
   width: 60%;
   height: 99%;
   outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .spotImage {
   border: 2px solid black;
@@ -24,4 +27,41 @@
   width: 40%;
   height: 99%;
   outline: none;
+}
+.spotType {
+  width: 100%;
+  font-size: 14px;
+  opacity: 0.5;
+}
+.spotTitle {
+  margin: 10px;
+  font-size: 20px;
+}
+.amenitiesList {
+  margin-bottom: 5px;
+}
+.spotRating {
+  margin-bottom: 5px;
+}
+.spotPrice {
+  margin-bottom: 5px;
+}
+.partialLine {
+  width: 20%;
+  border-top: 2px solid lightgray;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.partialLineBox {
+  width: 100%;
+  text-align: start;
+  margin-left: 10px;
+}
+.ratingPriceBox {
+  margin-left: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-size: 20px;
 }
