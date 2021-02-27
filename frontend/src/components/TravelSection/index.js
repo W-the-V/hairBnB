@@ -14,20 +14,36 @@ function TravelSection() {
         <div className="travelBlock">
           <div className="travelImageShell">
             <div className="travelImage">
-              <img className="TravelImg" src={barber} />
+              <img
+                className="TravelImg"
+                src={barber}
+                alt="barbershop by fauzan akbar, ID"
+              />
               <div className="travelDesc">Popular Barbershops</div>
             </div>
             <div className="travelImage">
-              <img className="TravelImg" src={salon} />
+              <img
+                className="TravelImg"
+                src={salon}
+                alt="Hair Salon by iconixar"
+              />
               <div className="travelDesc">Popular Salons</div>
             </div>
             <div className="travelImage">
-              <img className="TravelImg dark" src={donate} />
-              <div className="travelDesc">Top charities</div>
+              <img
+                className="TravelImg dark"
+                src={donate}
+                alt="Donation by The Icon Z at Noun Project"
+              />
+              <div className="travelDesc">Top Charities</div>
             </div>
             <div className="travelImage">
-              <img className="TravelImg dark" src={travel} />
-              <div className="travelDesc">Get a haircut while on Vacation</div>
+              <img
+                className="TravelImg dark"
+                src={travel}
+                alt="Travel by Hai Studio, ID"
+              />
+              <div className="travelDesc">Vacation Haircut</div>
             </div>
           </div>
         </div>

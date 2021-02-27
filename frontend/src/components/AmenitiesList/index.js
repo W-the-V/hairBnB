@@ -7,15 +7,15 @@ function AmenitiesList() {
         <div className="amenitiesBlock">
           <div className="amenityImage">
             <i className="fas fa-comment-dots amenityIco"></i>
-            <div className="amenityInfo">Talkative staff</div>
+            <div className="amenityInfo">Talkative Staff</div>
           </div>
           <div className="amenityImage">
             <i className="fas fa-comment-slash amenityIco"></i>
-            <div className="amenityInfo">Non-talkative staff</div>
+            <div className="amenityInfo">Non-talkative Staff</div>
           </div>
           <div className="amenityImage">
             <i className="fas fa-sink amenityIco"></i>
-            <div className="amenityInfo">Hair washing</div>
+            <div className="amenityInfo">Hair Washing</div>
           </div>
           <div className="amenityImage">
             <i className="fas fa-tint amenityIco"></i>
